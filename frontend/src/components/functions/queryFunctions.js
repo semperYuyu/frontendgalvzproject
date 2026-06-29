@@ -56,6 +56,8 @@ export const submitSignUp = async (
 
   const data = await req.json();
   if (!data.error) {
+    console.log(data);
+    console.log("set data V");
     console.log(data.data.id);
     Cookies.set("username", username);
     Cookies.set("userId", data.data.id);
