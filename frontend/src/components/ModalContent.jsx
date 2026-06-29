@@ -1,10 +1,8 @@
 import { Button, Form } from "react-bootstrap";
 import { submitNewItem, getUserId } from "./functions/queryFunctions";
-import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 
 const ModalContent = ({ cancel }) => {
-  const navigate = useNavigate();
   const nameRef = useRef();
   const descRef = useRef();
   const quantRef = useRef();
@@ -48,10 +46,9 @@ const ModalContent = ({ cancel }) => {
 
             if (req.error) {
               errorRef.current.innerText = req.error;
-              console.log(req.error)
               return;
             }
-            window.location.reload()
+            window.location.reload();
             return;
           }}
         >
