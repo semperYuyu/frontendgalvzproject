@@ -1,4 +1,4 @@
-import { Button, Spinner } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "../components/Modal.jsx";
@@ -28,7 +28,6 @@ function ViewInventory() {
       .then((res) => setData(res.data));
   }, []);
 
-  if (!data) return <Spinner animation={"border"} />;
   return (
     <div className={"d-flex flex-column align-items-center gap-3"}>
       <h2> {username}'s Inventory </h2>
