@@ -24,6 +24,7 @@ export const submitLogin = async (username, password) => {
   const data = await req.json();
   if (!data.error) {
     Cookies.set("username", username);
+    Cookies.set("userId", data.id);
   }
   return data;
 }; // login to url/auth/login
@@ -114,7 +115,8 @@ export const submitNewItem = async (
 
   if (
     (!item_name && !description && !quantity) ||
-    (item_name === "" || description === "")
+    item_name === "" ||
+    description === ""
   ) {
     return { error: "All fields required" };
   }
