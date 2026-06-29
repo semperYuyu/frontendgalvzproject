@@ -28,7 +28,10 @@ function ViewInventory() {
       .then((res) => setData(res.data));
   }, []);
 
-  if (!data) return;
+  if (!data) {
+    setData([]);
+    return;
+  }
 
   return (
     <div className={"d-flex flex-column align-items-center gap-3"}>
