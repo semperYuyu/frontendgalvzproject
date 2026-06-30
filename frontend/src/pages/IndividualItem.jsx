@@ -101,6 +101,7 @@ function IndividualItem() {
             borderColor: "white",
             border: editable ? "" : "none",
             borderRadius: "15px",
+            width: "70ch",
           }}
           maxLength={100}
           readOnly={!editable}
@@ -118,6 +119,7 @@ function IndividualItem() {
             borderColor: "white",
             border: editable ? "" : "none",
             borderRadius: "15px",
+            width: "70ch",
           }}
           maxLength={100}
           readOnly={!editable}
